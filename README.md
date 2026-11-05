@@ -1,6 +1,6 @@
 # Kagisho Sophy Thobejane · Digital CV
 
-A one-page animated CV for an admitted attorney, built with **React 19 + Vite + TypeScript** and **GSAP** (ScrollTrigger, DrawSVG). Hosted on **Vercel**.
+A one-page animated CV for an admitted attorney, built with **React 19 + Vite + TypeScript** and **GSAP** (ScrollTrigger, DrawSVG). Hosted on **Netlify** (free plan).
 
 Palette: Egyptian Blue `#03203D` (canvas) · Stone Blue `#639CC5` (support) · Scarlet Red `#EB2F33` (accent).
 
@@ -29,9 +29,9 @@ npm run lint
 
 All animation switches off for visitors with *reduced motion* enabled.
 
-## Deploying (Vercel)
+## Deploying (Netlify)
 
-Vercel builds automatically from GitHub: every push to `main` updates the live site, and every other branch gets its own preview URL. `vercel.json` sets the framework and, while in draft, tells search engines not to index the site.
+Netlify builds automatically from GitHub: every push to `main` updates the live site. `netlify.toml` holds the build settings and, while in draft, tells search engines not to index the site.
 
 ## Draft preview vs. going live
 
@@ -43,6 +43,6 @@ The site ships in **draft mode**: a "Draft preview" notice, dashed placeholder c
 2. Contact form: create a free form at [formspree.io](https://formspree.io) (submissions are emailed to her), then set `VITE_FORM_ENDPOINT` in `.env`
 3. `.env`: `VITE_DRAFT=false` and `VITE_ROBOTS=index, follow`
 4. `public/robots.txt`: change `Disallow: /` to `Allow: /`
-5. `vercel.json`: delete the `headers` block
+5. `netlify.toml`: delete the `X-Robots-Tag` headers block
 6. `index.html`: make `og:image` an absolute URL (`https://<your-domain>/og.png`)
-7. Optional: add her custom domain in Vercel → Project → Settings → Domains
+7. Optional: add her custom domain in Netlify → Site configuration → Domain management
