@@ -1,0 +1,3 @@
+# Draft preview: not for indexing. Replace with "Allow: /" at launch.
+User-agent: *
+Disallow: /
