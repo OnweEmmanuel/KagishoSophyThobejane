@@ -44,5 +44,5 @@ The site ships in **draft mode**: a "Draft preview" notice, dashed placeholder c
 3. `.env`: `VITE_DRAFT=false` and `VITE_ROBOTS=index, follow`
 4. `public/robots.txt`: change `Disallow: /` to `Allow: /`
 5. `netlify.toml`: delete the `X-Robots-Tag` headers block
-6. `index.html`: make `og:image` an absolute URL (`https://<your-domain>/og.png`)
+6. Link previews pick up the live address automatically on Netlify (see `vite.config.ts`)
 7. Optional: add her custom domain in Netlify → Site configuration → Domain management

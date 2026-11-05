@@ -84,7 +84,7 @@ export function Contact() {
                 <button className="btn btn--scarlet" type="submit" disabled={locked}>
                   {!FORM_LIVE ? (
                     <>
-                      <Icon name="lock" size={18} /> Activates once the site is live
+                      <Icon name="lock" size={18} /> Opens once this draft is approved
                     </>
                   ) : status === 'sending' ? (
                     'Sending…'
