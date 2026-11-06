@@ -8,14 +8,6 @@ import { Icon } from '../components/Icon';
 
 const BEAM_ARM = 130; // distance from pivot to each pan's hook, in SVG units
 
-const GLYPHS = [
-  { ch: '§', x: 8, y: 18, s: 3.2 },
-  { ch: '¶', x: 46, y: 82, s: 2.4 },
-  { ch: '§', x: 88, y: 70, s: 4.4 },
-  { ch: '¶', x: 64, y: 12, s: 2 },
-  { ch: '§', x: 30, y: 55, s: 1.6 },
-];
-
 export function Hero() {
   const ref = useRef<HTMLElement>(null);
 
@@ -60,11 +52,6 @@ export function Hero() {
         }
         rot.set('.rotator__stack', { yPercent: 0 });
 
-        // drifting legal glyphs
-        gsap.utils.toArray<HTMLElement>('.hero__glyph').forEach((g, i) => {
-          gsap.to(g, { y: i % 2 ? 30 : -30, rotation: i % 2 ? 8 : -8, duration: 6 + i, ease: 'sine.inOut', yoyo: true, repeat: -1 });
-        });
-
         // the art leans gently away as you scroll past
         gsap.to('.courthouse', { yPercent: 10, ease: 'none', scrollTrigger: { trigger: ref.current, start: 'top top', end: 'bottom top', scrub: true } });
         gsap.to('.hero__art', { yPercent: 18, ease: 'none', scrollTrigger: { trigger: ref.current, start: 'top top', end: 'bottom top', scrub: true } });
@@ -86,11 +73,6 @@ export function Hero() {
       <div className="hero__bg" aria-hidden="true">
         <Courthouse />
         <span className="hero__glow" />
-        {GLYPHS.map((g, i) => (
-          <span key={i} className="hero__glyph" style={{ left: `${g.x}%`, top: `${g.y}%`, fontSize: `${g.s}rem` }}>
-            {g.ch}
-          </span>
-        ))}
         <span className="hero__flash" />
       </div>
 

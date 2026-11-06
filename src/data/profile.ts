@@ -94,7 +94,7 @@ export const profile = {
   firstName: 'Kagisho',
   monogram: 'KST',
   title: 'Admitted Attorney of the High Court of South Africa',
-  credentials: ['LLB (UCT)', 'Tax', 'PLT (Gawie le Roux)'],
+  credentials: ['LLB (UCT)', 'BA (UL)', 'PLT (Gawie le Roux)'],
   currentRole: 'Graduate Trainee · South African Revenue Service',
   location: 'Johannesburg, Gauteng, South Africa',
   linkedin: 'https://www.linkedin.com/in/kagisho-sophy-thobejane-346765137/',
@@ -119,7 +119,7 @@ export const profile = {
   focusWords: ['Tax law', 'Litigation', 'Compliance', 'Dispute resolution', 'Customs & excise'],
 
   stats: [
-    { value: 3, suffix: '×', label: 'Top of class, 2019' },
+    { value: 5, suffix: '', label: 'Qualifications & courses' },
     { value: 4, suffix: '+', label: 'Years mentoring learners' },
     { value: 400, suffix: '', label: 'Hours of practical legal training' },
     { value: 6, suffix: '', label: 'SARS divisions of rotation' },

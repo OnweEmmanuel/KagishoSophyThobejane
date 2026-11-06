@@ -9,7 +9,9 @@ const LINKS = [
   ['path', 'Path'],
   ['experience', 'Experience'],
   ['credentials', 'Credentials'],
+  ['skills', 'Skills'],
   ['honours', 'Honours'],
+  ['service', 'Pro bono'],
   ['contact', 'Contact'],
 ] as const;
 
